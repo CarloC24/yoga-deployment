@@ -4,3 +4,4 @@ copy git url
 https://git.heroku.com/sickfits-yoga-carlo.git
 ADD A NEW REMOTE BACKEND
 git remote add heroku backend https://git.heroku.com/sickfits-yoga-carlo.git
+git subtree push --prefix backend heroku-backend master
