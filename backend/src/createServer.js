@@ -20,4 +20,13 @@ function createServer() {
   });
 }
 
+
+punchcardcounter = 0;
+if(punchcardcounter == 10){
+  //free pass!
+  punchcardcounter = 0;
+} else {
+  punchcardcounter++
+//pay up dude
+}
 module.exports = createServer;
