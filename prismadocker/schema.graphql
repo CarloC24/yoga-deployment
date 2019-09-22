@@ -1,6 +1,20 @@
-
-
+# import * from "./generated/graphql-schema/prisma-schema.graphql"
 type Query {
     users: [User]!
-    user:User!
+    user(id:ID!):User
+}
+
+type Mutation {
+ createUser(
+     name:String!
+     password:String!
+ ): User!
+ updateUser(
+     id: ID!
+     name:String!
+     password:String!
+ ): User!
+ deleteUser(
+     id:ID!
+ ): User!
 }
