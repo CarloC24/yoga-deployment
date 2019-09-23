@@ -5,6 +5,7 @@ const Query = {
     console.log(ctx.prisma.user, args.id);
     return await ctx.prisma.user({ id: args.id }, info);
   },
+  //   users: forwardTo("prisma")
   async users(parent, args, ctx, info) {
     return await ctx.prisma.users();
   }
