@@ -10,7 +10,7 @@ const { typeDefs } = require("./generated/prisma-client/prisma-schema");
 // console.log("this is a graphql file", print(schema));
 
 const server = new GraphQLServer({
-  typeDefs: "schema.graphql",
+  typeDefs,
   resolvers: {
     Mutation,
     Query
@@ -22,6 +22,10 @@ const server = new GraphQLServer({
     ...req,
     prisma
   })
+});
+server.express.use((req, res, next) => {
+  console.log("hello");
+  next();
 });
 
 server.start(

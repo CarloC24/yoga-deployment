@@ -1,7 +1,7 @@
 # import * from "./generated/graphql-schema/prisma-schema.graphql"
 type Query {
     users: [User]!
-    user(id:ID!):User
+    user(where: UserWhereUniqueInput!):User
 }
 
 type Mutation {
